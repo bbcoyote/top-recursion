@@ -30,7 +30,7 @@ function fibs(num) {
     console.log(fibArr)
 }
 
-fibs(8)
+// fibs(8)
 
 // Now to make fibs a recursive function.
 // we need a base case,
@@ -38,6 +38,14 @@ fibs(8)
 // if I give num 8 how do I get to 13 
 
 
-function fibRecursive(num) {
+function fibRec(num, array) {
+    // 1st fib el
+    if (num == 1) return 0;
+    // 2nd fib el
+    if (num == 2) return 1;
+    return fibRec(num - 1) + fibRec(num - 2);
 
 }
+let num = 7;
+answer = fibRec(num);
+console.log("The 7th term of the Fibonacci series is: ", answer)
